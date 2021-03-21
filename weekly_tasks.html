@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="weekly_tasks.css">
+</head>
+<body>
+  <div id="addTaskModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+        <h2>Add Task</h2>
+        Task:
+        <select name="choice">
+          <option value="first">First Value</option>
+          <option value="second" selected>Second Value</option>
+          <option value="third">Third Value</option>
+        </select>
+        <br><br>
+        <button  onclick="addTask()">Add</button>
+        <br><br><br>
+        <h2>Or Add a New Task:</h2>
+        <label for="taskname">Task Name:</label><br>
+        <input type="text" id="taskname" ><br><br>
+        <label for="taskdescription">Task Description:</label><br>
+        <input type="text" id="taskdescription"><br><br>
+        <input type="submit" value="Submit">
+        <br><br><br><br>
+        
+    </div>
+  </div>
+
+<h2>Weekly Tasks - Gabe</h2>
+
+<table id="gabetable">
+  <tr>
+    <th>Sunday</th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+  </tr>
+  <tr>
+    <td id="gabe0" ondblclick="openTaskMenu('gabe', '0')">
+      <input type="checkbox" id="task1day1gabe" onclick="updatePercent('gabe', '0')">
+      <label for="task1day1gabe" title="Task 1 description">Task 1</label><br>
+      <input type="checkbox" id="task2day1gabe" onclick="updatePercent('gabe', '0')">
+      <label for="task2day1gabe" title="Task 2 description">Task 2</label><br>
+    </td>
+    <td id="gabe1" ondblclick="openTaskMenu('gabe', '1')">
+      <input type="checkbox" id="task1day2gabe" onclick="updatePercent('gabe', '1')">
+      <label for="task1day2gabe" title="Task 1 description">Task 1</label><br>
+      <input type="checkbox" id="task2day2gabe" onclick="updatePercent('gabe', '1')">
+      <label for="task2day2gabe" title="Task 2 description">Task 2</label><br>
+    </td>
+    <td id="gabe2" ondblclick="openTaskMenu('gabe', '2')">
+      <input type="checkbox" id="task1day3gabe" onclick="updatePercent('gabe', '2')">
+      <label for="task1day3gabe" title="Task 1 description">Task 1</label><br>
+      <input type="checkbox" id="task2day3gabe" onclick="updatePercent('gabe', '2')">
+      <label for="task2day3gabe" title="Task 2 description">Task 2</label><br>
+    </td>
+    <td id="gabe3" ondblclick="openTaskMenu('gabe', '3')">
+      <input type="checkbox" id="task1day4gabe" onclick="updatePercent('gabe', '3')">
+      <label for="task1day4gabe" title="Task 1 description">Task 1</label><br>
+      <input type="checkbox" id="task2day4gabe" onclick="updatePercent('gabe', '3')">
+      <label for="task2day4gabe" title="Task 2 description">Task 2</label><br>
+    </td>
+    <td id="gabe4" ondblclick="openTaskMenu('gabe', '4')">
+      <input type="checkbox" id="task1day5gabe" onclick="updatePercent('gabe', '4')">
+      <label for="task1day5gabe" title="Task 1 description">Task 1</label><br>
+      <input type="checkbox" id="task2day5gabe" onclick="updatePercent('gabe', '4')">
+      <label for="task2day5gabe" title="Task 2 description">Task 2</label><br>
+    </td>
+    <td id="gabe5" ondblclick="openTaskMenu('gabe', '5')">
+      <input type="checkbox" id="task1day6gabe" onclick="updatePercent('gabe', '5')">
+      <label for="task1day6gabe" title="Task 1 description">Task 1</label><br>
+      <input type="checkbox" id="task2day6gabe" onclick="updatePercent('gabe', '5')">
+      <label for="task2day6gabe" title="Task 2 description">Task 2</label><br>
+    </td>
+    <td id="gabe6" ondblclick="openTaskMenu('gabe', '6')">
+      <input type="checkbox" id="task1day7gabe" onclick="updatePercent('gabe', '6')">
+      <label for="task1day7gabe" title="Task 1 description">Task 1</label><br>
+      <input type="checkbox" id="task2day7gabe" onclick="updatePercent('gabe', '6')">
+      <label for="task2day7gabe" title="Task 2 description">Task 2</label><br>
+    </td>
+  </tr>
+  <tr>
+    <td>0%</t>
+    <td>0%</td>
+    <td>0%</td>
+    <td>0%</td>
+    <td>0%</td>
+    <td>0%</td>
+    <td>0%</td>
+  </tr>
+
+</table>
+
+<br><br><br>
+
+<h2>Weekly Tasks - Sad&eacute;</h2>
+
+<table id="sadetable">
+  <tr>
+    <th>Sunday</th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+  </tr>
+  <tr>
+    <td id="sade0" ondblclick="openTaskMenu('sade', '0')">
+      <input type="checkbox" id="task1day1sade" onclick="updatePercent('sade', '0')">
+      <label for="task1day1sade" title="Task 1 description">Task 1</label><br>
+      <input type="checkbox" id="task2day1sade" onclick="updatePercent('sade', '0')">
+      <label for="task2day1sade" title="Task 2 description">Task 2</label><br>
+    </td>
+    <td id="sade1" ondblclick="openTaskMenu('sade', '1')">
+      <input type="checkbox" id="task1day2sade" onclick="updatePercent('sade', '1')">
+      <label for="task1day2sade" title="Task 1 description">Task 1</label><br>
+      <input type="checkbox" id="task2day2sade" onclick="updatePercent('sade', '1')">
+      <label for="task2day2sade" title="Task 2 description">Task 2</label><br>
+    </td>
+    <td id="sade2" ondblclick="openTaskMenu('sade', '2')">
+      <input type="checkbox" id="task1day3sade" onclick="updatePercent('sade', '2')">
+      <label for="task1day3sade" title="Task 1 description">Task 1</label><br>
+      <input type="checkbox" id="task2day3sade" onclick="updatePercent('sade', '2')">
+      <label for="task2day3sade" title="Task 2 description">Task 2</label><br>
+    </td>
+    <td id="sade3" ondblclick="openTaskMenu('sade', '3')">
+      <input type="checkbox" id="task1day4sade" onclick="updatePercent('sade', '3')">
+      <label for="task1day4sade" title="Task 1 description">Task 1</label><br>
+      <input type="checkbox" id="task2day4sade" onclick="updatePercent('sade', '3')">
+      <label for="task2day4sade" title="Task 2 description">Task 2</label><br>
+    </td>
+    <td id="sade4" ondblclick="openTaskMenu('sade', '4')">
+      <input type="checkbox" id="task1day5sade" onclick="updatePercent('sade', '4')">
+      <label for="task1day5sade" title="Task 1 description">Task 1</label><br>
+      <input type="checkbox" id="task2day5sade" onclick="updatePercent('sade', '4')">
+      <label for="task2day5sade" title="Task 2 description">Task 2</label><br>
+    </td>
+    <td id="sade5" ondblclick="openTaskMenu('sade', '5')">
+      <input type="checkbox" id="task1day6sade" onclick="updatePercent('sade', '5')">
+      <label for="task1day6sade" title="Task 1 description">Task 1</label><br>
+      <input type="checkbox" id="task2day6sade" onclick="updatePercent('sade', '5')">
+      <label for="task2day6sade" title="Task 2 description">Task 2</label><br>
+    </td>
+    <td id="sade6" ondblclick="openTaskMenu('sade', '6')">
+      <input type="checkbox" id="task1day7sade" onclick="updatePercent('sade', '6')">
+      <label for="task1day7sade" title="Task 1 description">Task 1</label><br>
+      <input type="checkbox" id="task2day7sade" onclick="updatePercent('sade', '6')">
+      <label for="task2day7sade" title="Task 2 description">Task 2</label><br>
+    </td>
+  </tr>
+  <tr>
+    <td>0%</t>
+    <td>0%</td>
+    <td>0%</td>
+    <td>0%</td>
+    <td>0%</td>
+    <td>0%</td>
+    <td>0%</td>
+  </tr>
+
+</table>
+
+<script src="weekly_tasks.js"></script>
+
+</body>
+</html>
